@@ -29,4 +29,5 @@ libraryDependencies += "io.astraea" %% "raster-frames" % "{version}"
 
 All code is available to you under the Apache 2.0 License, copyright Astraea, Inc. 2017.
 
+CLI Test
 
