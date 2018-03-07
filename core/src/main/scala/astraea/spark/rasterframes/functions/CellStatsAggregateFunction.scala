@@ -114,7 +114,7 @@ object CellStatsAggregateFunction {
     def apply(stats: geotrellis.raster.summary.Statistics[Double]) =
       new Statistics(stats.dataCells, stats.zmin, stats.zmax, stats.mean, stats.stddev * stats.stddev)
 
-    def applyInt(stats: geotrellis.raster.summary.Statistics[Int]) =
+    def apply(stats: geotrellis.raster.summary.Statistics[Int])(implicit d: DummyImplicit) =
       new Statistics(stats.dataCells, stats.zmin.toDouble, stats.zmax.toDouble, stats.mean, stats.stddev * stats.stddev)
   }
 
