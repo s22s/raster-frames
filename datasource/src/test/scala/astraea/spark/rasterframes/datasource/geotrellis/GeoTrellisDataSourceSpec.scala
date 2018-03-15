@@ -145,6 +145,7 @@ class GeoTrellisDataSourceSpec
     it("should write to parquet") {
       //just should not throw
       val df = layerReader.loadRF(layer)
+        .drop(BOUNDS_COLUMN)
       assert(write(df))
     }
   }
